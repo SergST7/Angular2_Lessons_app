@@ -7,8 +7,11 @@ import {
 
 
 import { AppComponent }  from './app.component';
+
+//My Components
 import { FormsList }  from './forms/forms-list.component';
 import { FormSCU}  from './forms/form-scu.component';
+import { FormSKUBuilder }  from './forms/form-builder.component';
 
 @NgModule({
   imports:      [
@@ -19,7 +22,8 @@ import { FormSCU}  from './forms/form-scu.component';
   declarations: [
     AppComponent,
     FormsList,
-    FormSCU
+    FormSCU,
+    FormSKUBuilder
   ],
   bootstrap:    [ AppComponent ]
 })

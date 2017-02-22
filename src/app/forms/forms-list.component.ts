@@ -8,6 +8,7 @@ import { Component } from "@angular/core";
   selector: "forms-list",
   template: `
      <form-scu></form-scu>
+     <form-sku-builder></form-sku-builder>
 
   `
 })
