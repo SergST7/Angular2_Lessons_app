@@ -25,4 +25,7 @@ import {Component} from "@angular/core";
   `
 })
 export class FormSCU {
+  onSubmit(result: any): void{
+    console.log('My value from Form1 :', result)
+  }
 }
