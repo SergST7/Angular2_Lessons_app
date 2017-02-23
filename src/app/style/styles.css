@@ -3,3 +3,11 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
 }
+
+/* by default, semantic UI hides these unless the whole form is in the same
+state. we don't want to impose that requirement */
+.ui.form .error.message,
+.ui.form .success.message,
+.ui.form .warning.message {
+  display: block;
+}

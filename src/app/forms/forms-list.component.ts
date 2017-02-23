@@ -12,7 +12,8 @@ import { Component } from "@angular/core";
      <form-sku-builder></form-sku-builder>
      <div class="ui divider"></div>
      <form-validation-expl></form-validation-expl>
-
+     <div class="ui divider"></div>
+     <form-validation-custom></form-validation-custom>
   `
 })
 export class FormsList{}

@@ -11,13 +11,13 @@ import {
 } from "@angular/forms";
 
 @Component({
-  selector: 'form-validation-expl',
+  selector: 'form-validation-custom',
   template: `
     <div class="ui raised segment">
-       <h2 class="ui header">Form with explicitly validation</h2>
+       <h2 class="ui header">Form with custom validation</h2>
        <form class="ui form"
-              [formGroup]="myForm3"
-              (ngSubmit)="onSubmit(myForm3.value)">
+              [formGroup]="myForm4"
+              (ngSubmit)="onSubmit(myForm4.value)">
         
           <div class="field"
             [class.error]="!sku.valid && sku.touched">
@@ -35,7 +35,7 @@ import {
                   class="ui error message">SKU is required</div>
           </div>
           
-           <div *ngIf="!myForm3.valid"
+           <div *ngIf="!myForm4.valid"
                   class="ui error message">Form is invalid</div>
 
           
@@ -44,18 +44,18 @@ import {
     </div>
   `
 })
-export class FormExplValidation {
-  myForm3: FormGroup;
+export class FormCustomValidation {
+  myForm4: FormGroup;
   sku: AbstractControl;
 
   constructor(fb: FormBuilder) {
-    this.myForm3 = fb.group({
+    this.myForm4 = fb.group({
       'sku': ['', Validators.required]
     });
-    this.sku = this.myForm3.controls['sku']
+    this.sku = this.myForm4.controls['sku']
   }
 
   onSubmit(value: string): void {
-    console.log('Form with validation submitted value: ', value);
+    console.log('Form with custom validation submitted value: ', value);
   }
 }

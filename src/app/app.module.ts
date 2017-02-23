@@ -13,6 +13,7 @@ import { FormsList }  from './forms/forms-list.component';
 import { FormSCU}  from './forms/form-scu.component';
 import { FormSKUBuilder }  from './forms/form-builder.component';
 import { FormExplValidation }  from './forms/form-validat-expl';
+import { FormCustomValidation }  from './forms/form-validat-custom';
 
 @NgModule({
   imports:      [
@@ -25,7 +26,8 @@ import { FormExplValidation }  from './forms/form-validat-expl';
     FormsList,
     FormSCU,
     FormSKUBuilder,
-    FormExplValidation
+    FormExplValidation,
+    FormCustomValidation
   ],
   bootstrap:    [ AppComponent ]
 })
