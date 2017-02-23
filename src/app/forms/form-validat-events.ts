@@ -52,7 +52,7 @@ export class FormlValidationEvents {
     this.myForm5 = fb.group({
       'sku': ['', Validators.required]
     });
-    this.sku = this.myForm5.controls['sku']
+    this.sku = this.myForm5.controls['sku'];
 
     this.sku.valueChanges.subscribe(
       (value: string) => {
@@ -65,10 +65,9 @@ export class FormlValidationEvents {
         console.log('Form changed to: ', form)
       }
     )
-
   }
 
-  onSubmit(value: string): void {
-    console.log('Form with validation submitted value: ', value);
+  onSubmit(form: any): void {
+    console.log('you submitted value:', form.sku);
   }
 }
