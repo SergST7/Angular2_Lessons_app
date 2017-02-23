@@ -16,6 +16,8 @@ import { Component } from "@angular/core";
      <form-validation-custom></form-validation-custom>
      <div class="ui divider"></div>
      <form-validation-events></form-validation-events>
+     <div class="ui divider"></div>
+     <form-ngmodel></form-ngmodel>
   `
 })
 export class FormsList{}

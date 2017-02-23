@@ -15,6 +15,7 @@ import { FormSKUBuilder }  from './forms/form-builder.component';
 import { FormExplValidation }  from './forms/form-validat-expl';
 import { FormCustomValidation }  from './forms/form-validat-custom';
 import { FormlValidationEvents }  from './forms/form-validat-events';
+import { FormNgmodelValidation }  from './forms/form-validat-ngmodel';
 
 @NgModule({
   imports:      [
@@ -29,7 +30,8 @@ import { FormlValidationEvents }  from './forms/form-validat-events';
     FormSKUBuilder,
     FormExplValidation,
     FormCustomValidation,
-    FormlValidationEvents
+    FormlValidationEvents,
+    FormNgmodelValidation
   ],
   bootstrap:    [ AppComponent ]
 })
