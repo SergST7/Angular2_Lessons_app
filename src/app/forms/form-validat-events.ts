@@ -53,6 +53,19 @@ export class FormlValidationEvents {
       'sku': ['', Validators.required]
     });
     this.sku = this.myForm5.controls['sku']
+
+    this.sku.valueChanges.subscribe(
+      (value: string) => {
+        console.log('sku changed to: ', value)
+      }
+    );
+
+    this.myForm5.valueChanges.subscribe(
+      (form: any) => {
+        console.log('Form changed to: ', form)
+      }
+    )
+
   }
 
   onSubmit(value: string): void {
