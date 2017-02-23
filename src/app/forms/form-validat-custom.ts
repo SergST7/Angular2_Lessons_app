@@ -48,6 +48,9 @@ function skuValidator(control: FormControl): { [s: string]: boolean } {
                   
              <div *ngIf="sku.hasError('required')"
                   class="ui error message">SKU is required</div>
+                  
+             <div *ngIf="sku.hasError('invalidSku')"
+                  class="ui error message">SKU must begin with <span>123</span></div>
           </div>
           
            <div *ngIf="!myForm4.valid"
@@ -65,7 +68,9 @@ export class FormCustomValidation {
 
   constructor(fb: FormBuilder) {
     this.myForm4 = fb.group({
-      'sku': ['', Validators.required]
+      'sku': ['', Validators.compose([
+        Validators.required,
+        skuValidator])]
     });
     this.sku = this.myForm4.controls['sku']
   }
